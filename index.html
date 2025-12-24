@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalyan256</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+body{
+    background:#f2f3f5;
+    display:flex;
+    justify-content:center;
+    padding:18px;
+}
+
+/* 🌟 CONTAINER GLOW ANIMATION */
+@keyframes containerGlow{
+    from{
+        box-shadow:
+            0 10px 30px rgba(0,0,0,0.08),
+            0 0 20px rgba(0,136,204,0.15);
+    }
+    to{
+        box-shadow:
+            0 14px 40px rgba(0,0,0,0.12),
+            0 0 40px rgba(0,136,204,0.35);
+    }
+}
+
+/* MAIN CARD */
+.wrapper{
+    width:100%;
+    max-width:420px;
+    background:#ffffff;
+    border-radius:28px;
+    padding:28px 22px 36px;
+    text-align:center;
+    animation:containerGlow 3s infinite alternate;
+}
+
+/* ✨ LOGO PNG WITH GLOW */
+.logo-box{
+    width:120px;
+    height:120px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    animation:logoGlow 3s infinite alternate;
+}
+
+.logo-box img{
+    width:85%;
+    height:85%;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+/* LOGO GLOW */
+@keyframes logoGlow{
+    from{
+        box-shadow:
+            0 0 12px rgba(255,193,7,0.6),
+            0 0 25px rgba(255,152,0,0.4);
+    }
+    to{
+        box-shadow:
+            0 0 22px rgba(255,213,79,1),
+            0 0 45px rgba(255,160,0,0.8);
+    }
+}
+
+/* TITLE */
+h1{
+    font-size:26px;
+    letter-spacing:4px;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    font-size:15px;
+    color:#7a7a7a;
+    line-height:1.6;
+    margin-bottom:26px;
+}
+
+/* ❤️ HEARTBEAT */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    20% { transform: scale(1.06); }
+    40% { transform: scale(1); }
+    60% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+
+/* 🌈 BUTTON GLOW MOVE */
+@keyframes glowMove{
+    0%{ background-position:0% 50%; }
+    50%{ background-position:100% 50%; }
+    100%{ background-position:0% 50%; }
+}
+
+/* 🔥 TELEGRAM BUTTON */
+.telegram-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    padding:16px;
+    border-radius:36px;
+    background:linear-gradient(270deg,#ff1744,#ff9100,#ff1744);
+    background-size:400% 400%;
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    text-decoration:none;
+    margin-bottom:34px;
+    animation:
+        heartbeat 2s infinite,
+        glowMove 4s ease infinite;
+    box-shadow:
+        0 0 15px rgba(255,23,68,0.6),
+        0 0 35px rgba(255,145,0,0.7);
+}
+
+/* SECTION */
+.section-title{
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:4px;
+}
+
+.section-sub{
+    font-size:13px;
+    color:#9a9a9a;
+    margin-bottom:16px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-bottom:30px;
+}
+
+/* CARDS */
+.card{
+    padding:15px;
+    border-radius:16px;
+    font-weight:600;
+    font-size:15px;
+    background:#fafafa;
+    border:1px solid #e6e6e6;
+}
+
+.game{
+    background:#fff3c4;
+    border:1px solid #f1e1a0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- PNG LOGO -->
+    <div class="logo-box">
+        <img src="logo.png" alt="Logo">
+    </div>
+
+    <h1>KALYAN256</h1>
+
+    <p class="subtitle">
+        एडवांस पाटिंग गेम खेलने के लिए<br>
+        अभी टेलीग्राम चैनल जॉइन करें
+    </p>
+
+    <a href="https://t.me/+lBJ1uH9_OC1mMDZl" class="telegram-btn">
+        JOIN TELEGRAM NOW ↗
+    </a>
+
+    <!-- MARKETS -->
+    <div class="section-title">Markets</div>
+    <div class="section-sub">Popular sessions covered</div>
+
+    <div class="grid">
+        <div class="card">Kalyan Day</div>
+        <div class="card">Milan Day</div>
+        <div class="card">Milan Night</div>
+        <div class="card">ShriDevi</div>
+        <div class="card">Time Bazar</div>
+        <div class="card">Main Bazar</div>
+    </div>
+
+    <!-- GAMES -->
+    <div class="section-title">Games</div>
+    <div class="section-sub">Different play categories</div>
+
+    <div class="grid">
+        <div class="card game">Jodi</div>
+        <div class="card game">Panel</div>
+        <div class="card game">Single</div>
+        <div class="card game">Open</div>
+    </div>
+
+</div>
+
+</body>
+</html>
