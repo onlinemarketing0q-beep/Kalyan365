@@ -1,237 +1,457 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalyan256</title>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2349660762159173');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2349660762159173&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gujarati Trader - Jiga Bhai</title>
 
-body{
-    background:#f2f3f5;
-    display:flex;
-    justify-content:center;
-    padding:18px;
-}
-
-/* 🌟 CONTAINER GLOW ANIMATION */
-@keyframes containerGlow{
-    from{
-        box-shadow:
-            0 10px 30px rgba(0,0,0,0.08),
-            0 0 20px rgba(0,136,204,0.15);
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    to{
-        box-shadow:
-            0 14px 40px rgba(0,0,0,0.12),
-            0 0 40px rgba(0,136,204,0.35);
+
+    :root {
+      --bg: #172126;
+      --card: #1b272c;
+      --border: #3a484d;
+      --gold: #e8d18b;
+      --white: #f7f7f7;
+      --muted: #b9c0c3;
+      --pink: #e00083;
+      --green: #1fd568;
     }
-}
 
-/* MAIN CARD */
-.wrapper{
-    width:100%;
-    max-width:420px;
-    background:#ffffff;
-    border-radius:28px;
-    padding:28px 22px 36px;
-    text-align:center;
-    animation:containerGlow 3s infinite alternate;
-}
-
-/* ✨ LOGO PNG WITH GLOW */
-.logo-box{
-    width:120px;
-    height:120px;
-    margin:0 auto 18px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#fff;
-    animation:logoGlow 3s infinite alternate;
-}
-
-.logo-box img{
-    width:85%;
-    height:85%;
-    object-fit:contain;
-    border-radius:50%;
-}
-
-/* LOGO GLOW */
-@keyframes logoGlow{
-    from{
-        box-shadow:
-            0 0 12px rgba(255,193,7,0.6),
-            0 0 25px rgba(255,152,0,0.4);
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      min-height: 100vh;
+      padding: 20px 14px 50px;
     }
-    to{
-        box-shadow:
-            0 0 22px rgba(255,213,79,1),
-            0 0 45px rgba(255,160,0,0.8);
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      margin: auto;
     }
-}
 
-/* TITLE */
-h1{
-    font-size:26px;
-    letter-spacing:4px;
-    margin-bottom:8px;
-}
+    /* PROFILE HEADER */
 
-.subtitle{
-    font-size:15px;
-    color:#7a7a7a;
-    line-height:1.6;
-    margin-bottom:26px;
-}
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+      padding: 24px 10px 30px;
+    }
 
-/* ❤️ HEARTBEAT */
-@keyframes heartbeat {
-    0% { transform: scale(1); }
-    20% { transform: scale(1.06); }
-    40% { transform: scale(1); }
-    60% { transform: scale(1.06); }
-    100% { transform: scale(1); }
-}
+    /* PNG LOGO */
 
-/* 🌈 BUTTON GLOW MOVE */
-@keyframes glowMove{
-    0%{ background-position:0% 50%; }
-    50%{ background-position:100% 50%; }
-    100%{ background-position:0% 50%; }
-}
+    .logo {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #d8b95c;
+      background: white;
+      display: block;
+      box-shadow: 0 0 0 3px rgba(232, 209, 139, 0.08);
+    }
 
-/* 🔥 TELEGRAM BUTTON */
-.telegram-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    width:100%;
-    padding:16px;
-    border-radius:36px;
-    background:linear-gradient(270deg,#ff1744,#ff9100,#ff1744);
-    background-size:400% 400%;
-    color:#fff;
-    font-size:16px;
-    font-weight:700;
-    text-decoration:none;
-    margin-bottom:34px;
-    animation:
-        heartbeat 2s infinite,
-        glowMove 4s ease infinite;
-    box-shadow:
-        0 0 15px rgba(255,23,68,0.6),
-        0 0 35px rgba(255,145,0,0.7);
-}
+    .profile h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      line-height: 1.15;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
 
-/* SECTION */
-.section-title{
-    font-size:18px;
-    font-weight:700;
-    margin-bottom:4px;
-}
+    .profile-subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-.section-sub{
-    font-size:13px;
-    color:#9a9a9a;
-    margin-bottom:16px;
-}
+    .verified {
+      color: #e6d08b;
+      background: rgba(155, 133, 52, 0.28);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
 
-/* GRID */
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-    margin-bottom:30px;
-}
+    /* TELEGRAM BUTTON */
 
-/* CARDS */
-.card{
-    padding:15px;
-    border-radius:16px;
-    font-weight:600;
-    font-size:15px;
-    background:#fafafa;
-    border:1px solid #e6e6e6;
-}
+    .cta {
+      display: block;
+      width: 100%;
+      padding: 28px 20px;
+      border: 2px solid #ff4bb0;
+      border-radius: 60px;
+      background: linear-gradient(110deg, #d8007d, #e60091);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-size: clamp(19px, 4vw, 28px);
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      box-shadow: 0 10px 35px rgba(224, 0, 131, 0.34);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
 
-.game{
-    background:#fff3c4;
-    border:1px solid #f1e1a0;
-}
-</style>
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(224, 0, 131, 0.5);
+    }
+
+    .rocket {
+      display: block;
+      font-size: 30px;
+      margin-top: 8px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      margin-top: 34px;
+      padding: 22px 20px;
+      border-left: 7px solid #d8b74d;
+      border-radius: 35px;
+      background: linear-gradient(90deg, #253439, #1b272c);
+      color: #dfe3e3;
+      font-size: clamp(16px, 3vw, 21px);
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .intro strong {
+      color: #f0d99a;
+    }
+
+    /* FEATURES */
+
+    .features {
+      margin-top: 30px;
+      border: 1px solid var(--border);
+      border-radius: 35px;
+      padding: 30px 24px;
+      background: linear-gradient(145deg, #1c292e, #172126);
+    }
+
+    .features h2 {
+      text-align: center;
+      color: #efda9b;
+      font-size: clamp(19px, 4vw, 28px);
+      line-height: 1.45;
+      margin-bottom: 28px;
+      font-weight: 900;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      font-size: clamp(16px, 3vw, 21px);
+      line-height: 1.45;
+      font-weight: 700;
+      color: #e6e4d8;
+    }
+
+    .feature-icon {
+      flex: 0 0 43px;
+      width: 43px;
+      font-size: 28px;
+      text-align: center;
+      line-height: 1.35;
+    }
+
+    .check {
+      color: var(--green);
+      font-size: 25px;
+      margin-right: 6px;
+    }
+
+    .feature-text {
+      flex: 1;
+    }
+
+    /* BOTTOM CTA */
+
+    .bottom-cta {
+      margin-top: 30px;
+      padding: 26px 20px;
+      border: 1px solid #635b31;
+      border-radius: 30px;
+      background: #202d31;
+      text-align: center;
+    }
+
+    .bottom-cta h3 {
+      color: #f0d99a;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .bottom-cta p {
+      color: #b9c0c3;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .bottom-cta a {
+      display: inline-block;
+      background: var(--pink);
+      color: white;
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 35px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    /* DISCLAIMER */
+
+    .disclaimer {
+      margin-top: 28px;
+      text-align: center;
+      color: #8e9a9f;
+      font-size: 12px;
+      line-height: 1.6;
+      padding: 0 10px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px 10px 35px;
+      }
+
+      .profile {
+        gap: 16px;
+        padding: 20px 8px 26px;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile h1 {
+        font-size: 23px;
+        margin-bottom: 9px;
+      }
+
+      .profile-subtitle {
+        font-size: 13px;
+      }
+
+      .verified {
+        font-size: 10px;
+        padding: 4px 8px;
+      }
+
+      .cta {
+        padding: 23px 10px;
+        font-size: 19px;
+      }
+
+      .rocket {
+        font-size: 26px;
+      }
+
+      .intro {
+        padding: 18px 14px;
+        font-size: 16px;
+        margin-top: 28px;
+      }
+
+      .features {
+        padding: 25px 16px;
+        border-radius: 27px;
+      }
+
+      .features h2 {
+        font-size: 19px;
+      }
+
+      .feature {
+        gap: 8px;
+        font-size: 16px;
+      }
+
+      .feature-icon {
+        flex-basis: 31px;
+        width: 31px;
+        font-size: 22px;
+      }
+
+      .check {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+  <main class="container">
 
-    <!-- PNG LOGO -->
-    <div class="logo-box">
-        <img src="logo.png" alt="Logo">
-    </div>
+    <!-- PROFILE HEADER -->
+    <section class="profile">
 
-    <h1>KALYAN256</h1>
+      <!-- PNG LOGO: Place logo.png in the same folder -->
+      <img
+        src="logo.png"
+        alt="Gujarati Trader Logo"
+        class="logo"
+      >
 
-    <p class="subtitle">
-        एडवांस पाटिंग गेम खेलने के लिए<br>
-        अभी टेलीग्राम चैनल जॉइन करें
-    </p>
+      <div>
+        <h1>GUJARATI TRADER<br>(JIGA BHAI)</h1>
 
-    <a href="https://t.me/+lBJ1uH9_OC1mMDZl" class="telegram-btn">
-        JOIN TELEGRAM NOW ↗
+        <div class="profile-subtitle">
+          📈 Stock Market Education
+          <span class="verified">✓ OFFICIAL TG</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PRIMARY TELEGRAM CTA -->
+    <!-- No auto redirect. Opens only when user clicks. -->
+    <a
+      class="cta"
+      href="https://t.me/YOUR_TELEGRAM_USERNAME"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      📲 JOIN TELEGRAM - SUBSCRIBE NOW
+      <span class="rocket">🚀</span>
     </a>
 
-    <!-- MARKETS -->
-    <div class="section-title">Markets</div>
-    <div class="section-sub">Popular sessions covered</div>
+    <!-- INTRO -->
+    <section class="intro">
+      🎯 <strong>ગુજરાતી ટ્રેડર</strong> |
+      Professional Options &amp; Index Trading |
+      Join Winning Journey 🚀
+    </section>
 
-    <div class="grid">
-        <div class="card">Kalyan Day</div>
-        <div class="card">Milan Day</div>
-        <div class="card">Milan Night</div>
-        <div class="card">ShriDevi</div>
-        <div class="card">Time Bazar</div>
-        <div class="card">Main Bazar</div>
-    </div>
+    <!-- FEATURES -->
+    <section class="features">
 
-    <!-- GAMES -->
-    <div class="section-title">Games</div>
-    <div class="section-sub">Different play categories</div>
+      <h2>
+        ⚡ NIFTY • BANKNIFTY • STOCK OPTIONS<br>
+        • FINNIFTY ⚡
+      </h2>
 
-    <div class="grid">
-        <div class="card game">Jodi</div>
-        <div class="card game">Panel</div>
-        <div class="card game">Single</div>
-        <div class="card game">Open</div>
-    </div>
+      <div class="feature-list">
 
-</div>
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <div class="feature-text">
+            <span class="check">✅</span>
+            Get up to 200-400 Points Daily
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <div class="feature-text">
+            <span class="check">✅</span>
+            90-97% Accuracy Rate
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📞</div>
+          <div class="feature-text">
+            <span class="check">✅</span>
+            5-6 Observational Calls Everyday
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🏆</div>
+          <div class="feature-text">
+            <span class="check">✅</span>
+            4 Best Trades for Everyone
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <div class="feature-text">
+            <span class="check">✅</span>
+            Live Market Analysis + Option Buying Tips
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📈</div>
+          <div class="feature-text">
+            <span class="check">✅</span>
+            Professional Gujarati Trader Guidance &amp; Risk Management
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-text">
+            <span class="check">✅</span>
+            Intraday &amp; Positional Trading Setup
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="bottom-cta">
+
+      <h3>🚀 Start Your Trading Journey</h3>
+
+      <p>
+        Learn market concepts, explore trading setups,
+        and follow educational market analysis.
+      </p>
+
+      <!-- Manual click only -->
+      <a
+        href="https://t.me/YOUR_TELEGRAM_USERNAME"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        JOIN TELEGRAM NOW 🚀
+      </a>
+
+    </section>
+
+    <!-- DISCLAIMER -->
+    <p class="disclaimer">
+      Disclaimer: Trading in securities and derivatives involves
+      substantial risk. Past performance does not guarantee future
+      results. This page is for educational purposes only.
+    </p>
+
+  </main>
 
 </body>
 </html>
