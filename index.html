@@ -49,8 +49,6 @@
       padding: 24px 10px 30px;
     }
 
-    /* PNG LOGO */
-
     .logo {
       width: 115px;
       height: 115px;
@@ -89,30 +87,39 @@
       letter-spacing: 0.5px;
     }
 
-    /* TELEGRAM BUTTON */
+    /* COMMON TELEGRAM BUTTON DESIGN */
 
-   @media (max-width: 480px) {
-  .cta,
-  .bottom-cta a {
-    display: inline-block;
-    width: auto;
-    max-width: 100%;
-    padding: 14px 20px;
-    font-size: 15px;
-    border-radius: 35px;
-    text-align: center;
-  }
+    .telegram-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 58px;
+      padding: 16px 28px;
+      border: 2px solid #ff4bb0;
+      border-radius: 35px;
+      background: linear-gradient(110deg, #d8007d, #e60091);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+      box-shadow: 0 10px 35px rgba(224, 0, 131, 0.34);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
 
-  .cta {
-    margin: 0 auto;
-  }
+    .telegram-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(224, 0, 131, 0.5);
+    }
 
-  .rocket {
-    font-size: 22px;
-    margin-top: 5px;
-  }
-}
+    /* UPPER BUTTON */
 
+    .top-cta {
+      margin-top: 0;
+    }
 
     /* INTRO */
 
@@ -209,15 +216,9 @@
       margin-bottom: 20px;
     }
 
-    .bottom-cta a {
-      display: inline-block;
-      background: var(--pink);
-      color: white;
-      text-decoration: none;
-      padding: 16px 28px;
-      border-radius: 35px;
-      font-size: 17px;
-      font-weight: bold;
+    /* Same button size as upper button */
+    .bottom-cta .telegram-btn {
+      margin: 0 auto;
     }
 
     /* DISCLAIMER */
@@ -231,7 +232,7 @@
       padding: 0 10px;
     }
 
-    /* MOBILE */
+    /* MOBILE RESPONSIVE */
 
     @media (max-width: 480px) {
       body {
@@ -262,13 +263,12 @@
         padding: 4px 8px;
       }
 
-      .cta {
-        padding: 23px 10px;
-        font-size: 19px;
-      }
-
-      .rocket {
-        font-size: 26px;
+      /* Both buttons remain identical */
+      .telegram-btn {
+        min-height: 54px;
+        padding: 14px 16px;
+        font-size: 15px;
+        border-radius: 35px;
       }
 
       .intro {
@@ -300,6 +300,14 @@
       .check {
         font-size: 20px;
       }
+
+      .bottom-cta {
+        padding: 24px 16px;
+      }
+
+      .bottom-cta h3 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -309,9 +317,12 @@
   <main class="container">
 
     <!-- PROFILE HEADER -->
+
     <section class="profile">
 
-      <!-- PNG LOGO: Place logo.png in the same folder -->
+      <!-- PNG LOGO -->
+      <!-- Keep logo.png in the same folder as this HTML file -->
+
       <img
         src="logo.png"
         alt="Gujarati Trader Logo"
@@ -329,19 +340,20 @@
 
     </section>
 
-    <!-- PRIMARY TELEGRAM CTA -->
-    <!-- No auto redirect. Opens only when user clicks. -->
+    <!-- UPPER TELEGRAM BUTTON -->
+    <!-- Manual click only - no auto join or auto redirect -->
+
     <a
-      class="cta"
+      class="telegram-btn top-cta"
       href="https://t.me/+W7w_k3HA1NBkODU1"
       target="_blank"
       rel="noopener noreferrer"
     >
-      JOIN TELEGRAM
-      <span class="rocket">🚀</span>
+      📲 JOIN TELEGRAM - SUBSCRIBE NOW 🚀
     </a>
 
     <!-- INTRO -->
+
     <section class="intro">
       🎯 <strong>ગુજરાતી ટ્રેડર</strong> |
       Professional Options &amp; Index Trading |
@@ -349,6 +361,7 @@
     </section>
 
     <!-- FEATURES -->
+
     <section class="features">
 
       <h2>
@@ -418,6 +431,8 @@
     </section>
 
     <!-- BOTTOM CTA -->
+    <!-- Same size and design as upper button -->
+
     <section class="bottom-cta">
 
       <h3>🚀 Start Your Trading Journey</h3>
@@ -427,18 +442,19 @@
         and follow educational market analysis.
       </p>
 
-      <!-- Manual click only -->
       <a
+        class="telegram-btn"
         href="https://t.me/+W7w_k3HA1NBkODU1"
         target="_blank"
         rel="noopener noreferrer"
       >
-        JOIN TELEGRAM NOW 🚀
+        📲 JOIN TELEGRAM - SUBSCRIBE NOW 🚀
       </a>
 
     </section>
 
     <!-- DISCLAIMER -->
+
     <p class="disclaimer">
       Disclaimer: Trading in securities and derivatives involves
       substantial risk. Past performance does not guarantee future
