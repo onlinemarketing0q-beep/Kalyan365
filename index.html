@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#172126">
   <title>Gujarati Trader - Jiga Bhai</title>
 
   <style>
@@ -16,24 +15,21 @@
 
     :root {
       --bg: #172126;
+      --card: #1b272c;
       --border: #3a484d;
       --gold: #e8d18b;
+      --white: #f7f7f7;
       --muted: #b9c0c3;
       --pink: #e00083;
       --green: #1fd568;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
-      color: #f7f7f7;
+      color: var(--white);
       min-height: 100vh;
-      padding: 0 10px 20px;
-      overflow-x: hidden;
+      padding: 20px 14px 50px;
     }
 
     .container {
@@ -42,90 +38,100 @@
       margin: auto;
     }
 
-    /* COMPACT PROFILE */
+    /* PROFILE HEADER */
 
     .profile {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 10px;
-      padding: 14px 4px 16px;
+      gap: 18px;
+      padding: 24px 10px 30px;
     }
 
     .logo {
-      width: 82px;
-      height: 82px;
+      width: 115px;
+      height: 115px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #d8b95c;
-      background: #fff;
+      border: 4px solid #d8b95c;
+      background: white;
       display: block;
+      box-shadow: 0 0 0 3px rgba(232, 209, 139, 0.08);
     }
 
     .profile h1 {
-      font-size: 22px;
+      font-size: clamp(24px, 5vw, 36px);
       line-height: 1.15;
       font-weight: 900;
-      margin-bottom: 7px;
+      margin-bottom: 14px;
     }
 
     .profile-subtitle {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 16px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 8px;
     }
 
     .verified {
       color: #e6d08b;
       background: rgba(155, 133, 52, 0.28);
       border-radius: 20px;
-      padding: 4px 8px;
-      font-size: 9px;
+      padding: 5px 12px;
+      font-size: 12px;
       font-weight: bold;
+      letter-spacing: 0.5px;
     }
 
-    /* SAME BUTTON SIZE */
+    /* COMMON TELEGRAM BUTTON DESIGN */
 
     .telegram-btn {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
-      min-height: 48px;
-      padding: 11px 10px;
-      border: 1px solid #ff4bb0;
-      border-radius: 30px;
+      min-height: 58px;
+      padding: 16px 28px;
+      border: 2px solid #ff4bb0;
+      border-radius: 35px;
       background: linear-gradient(110deg, #d8007d, #e60091);
       color: white;
       text-decoration: none;
       text-align: center;
-      font-size: 13px;
+      font-size: 17px;
       font-weight: 900;
-      line-height: 1.3;
-      box-shadow: 0 5px 18px rgba(224, 0, 131, 0.25);
-      transition: transform 0.2s;
+      letter-spacing: 0.3px;
+      box-shadow: 0 10px 35px rgba(224, 0, 131, 0.34);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
     }
 
-    .telegram-btn:active {
-      transform: scale(0.98);
+    .telegram-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(224, 0, 131, 0.5);
+    }
+
+    /* UPPER BUTTON */
+
+    .top-cta {
+      margin-top: 0;
     }
 
     /* INTRO */
 
     .intro {
-      margin-top: 16px;
-      padding: 13px 10px;
-      border-left: 4px solid #d8b74d;
-      border-radius: 20px;
+      margin-top: 34px;
+      padding: 22px 20px;
+      border-left: 7px solid #d8b74d;
+      border-radius: 35px;
       background: linear-gradient(90deg, #253439, #1b272c);
       color: #dfe3e3;
-      font-size: 13px;
-      line-height: 1.45;
+      font-size: clamp(16px, 3vw, 21px);
+      line-height: 1.65;
       text-align: center;
     }
 
@@ -133,172 +139,174 @@
       color: #f0d99a;
     }
 
-    /* COMPACT FEATURES */
+    /* FEATURES */
 
     .features {
-      margin-top: 16px;
+      margin-top: 30px;
       border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 18px 13px;
+      border-radius: 35px;
+      padding: 30px 24px;
       background: linear-gradient(145deg, #1c292e, #172126);
     }
 
     .features h2 {
       text-align: center;
       color: #efda9b;
-      font-size: 16px;
-      line-height: 1.35;
-      margin-bottom: 17px;
+      font-size: clamp(19px, 4vw, 28px);
+      line-height: 1.45;
+      margin-bottom: 28px;
       font-weight: 900;
     }
 
     .feature-list {
       display: flex;
       flex-direction: column;
-      gap: 13px;
+      gap: 24px;
     }
 
     .feature {
       display: flex;
       align-items: flex-start;
-      gap: 7px;
-      font-size: 13px;
-      line-height: 1.35;
+      gap: 15px;
+      font-size: clamp(16px, 3vw, 21px);
+      line-height: 1.45;
       font-weight: 700;
       color: #e6e4d8;
-      min-width: 0;
     }
 
     .feature-icon {
-      flex: 0 0 25px;
-      width: 25px;
-      font-size: 19px;
+      flex: 0 0 43px;
+      width: 43px;
+      font-size: 28px;
       text-align: center;
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
     .check {
       color: var(--green);
-      font-size: 16px;
-      margin-right: 3px;
+      font-size: 25px;
+      margin-right: 6px;
     }
 
     .feature-text {
       flex: 1;
-      min-width: 0;
-      overflow-wrap: break-word;
     }
 
     /* BOTTOM CTA */
 
     .bottom-cta {
-      margin-top: 16px;
-      padding: 17px 13px;
+      margin-top: 30px;
+      padding: 26px 20px;
       border: 1px solid #635b31;
-      border-radius: 22px;
+      border-radius: 30px;
       background: #202d31;
       text-align: center;
     }
 
     .bottom-cta h3 {
       color: #f0d99a;
-      font-size: 17px;
-      line-height: 1.3;
-      margin-bottom: 7px;
+      font-size: 22px;
+      margin-bottom: 12px;
     }
 
     .bottom-cta p {
       color: #b9c0c3;
-      font-size: 12px;
-      line-height: 1.45;
-      margin-bottom: 13px;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Same button size as upper button */
+    .bottom-cta .telegram-btn {
+      margin: 0 auto;
     }
 
     /* DISCLAIMER */
 
     .disclaimer {
-      margin-top: 15px;
+      margin-top: 28px;
       text-align: center;
       color: #8e9a9f;
-      font-size: 10px;
-      line-height: 1.5;
-      padding: 0 5px;
+      font-size: 12px;
+      line-height: 1.6;
+      padding: 0 10px;
     }
 
-    /* DESKTOP */
+    /* MOBILE RESPONSIVE */
 
-    @media (min-width: 481px) {
+    @media (max-width: 480px) {
       body {
-        padding: 15px 14px 30px;
+        padding: 12px 10px 35px;
       }
 
       .profile {
-        gap: 13px;
-        padding: 20px 10px 22px;
+        gap: 16px;
+        padding: 20px 8px 26px;
       }
 
       .logo {
-        width: 105px;
-        height: 105px;
+        width: 100px;
+        height: 100px;
       }
 
       .profile h1 {
-        font-size: 32px;
-        margin-bottom: 10px;
+        font-size: 23px;
+        margin-bottom: 9px;
       }
 
       .profile-subtitle {
-        font-size: 15px;
+        font-size: 13px;
       }
 
+      .verified {
+        font-size: 10px;
+        padding: 4px 8px;
+      }
+
+      /* Both buttons remain identical */
       .telegram-btn {
         min-height: 54px;
-        padding: 14px 20px;
-        font-size: 16px;
+        padding: 14px 16px;
+        font-size: 15px;
+        border-radius: 35px;
       }
 
       .intro {
-        margin-top: 22px;
-        padding: 18px 16px;
-        font-size: 18px;
+        padding: 18px 14px;
+        font-size: 16px;
+        margin-top: 28px;
       }
 
       .features {
-        margin-top: 22px;
-        padding: 24px 20px;
+        padding: 25px 16px;
+        border-radius: 27px;
       }
 
       .features h2 {
-        font-size: 24px;
-        margin-bottom: 23px;
-      }
-
-      .feature-list {
-        gap: 19px;
+        font-size: 19px;
       }
 
       .feature {
-        gap: 12px;
-        font-size: 18px;
+        gap: 8px;
+        font-size: 16px;
       }
 
       .feature-icon {
-        flex-basis: 36px;
-        width: 36px;
-        font-size: 24px;
+        flex-basis: 31px;
+        width: 31px;
+        font-size: 22px;
+      }
+
+      .check {
+        font-size: 20px;
       }
 
       .bottom-cta {
-        margin-top: 22px;
-        padding: 22px 18px;
+        padding: 24px 16px;
       }
 
       .bottom-cta h3 {
         font-size: 20px;
-      }
-
-      .bottom-cta p {
-        font-size: 14px;
       }
     }
   </style>
@@ -308,18 +316,21 @@
 
   <main class="container">
 
-    <!-- PROFILE -->
+    <!-- PROFILE HEADER -->
 
     <section class="profile">
 
+      <!-- PNG LOGO -->
+      <!-- Keep logo.png in the same folder as this HTML file -->
+
       <img
-        src="images.png"
+        src="logo.png"
         alt="Gujarati Trader Logo"
         class="logo"
       >
 
       <div>
-        <h1>GUJRATI TRADER<br>(JIGA BHAI)</h1>
+        <h1>GUJARATI TRADER<br>(JIGA BHAI)</h1>
 
         <div class="profile-subtitle">
           📈 Stock Market Education
@@ -329,10 +340,11 @@
 
     </section>
 
-    <!-- TOP TELEGRAM BUTTON -->
+    <!-- UPPER TELEGRAM BUTTON -->
+    <!-- Manual click only - no auto join or auto redirect -->
 
     <a
-      class="telegram-btn"
+      class="telegram-btn top-cta"
       href="https://t.me/+W7w_k3HA1NBkODU1"
       target="_blank"
       rel="noopener noreferrer"
@@ -419,6 +431,7 @@
     </section>
 
     <!-- BOTTOM CTA -->
+    <!-- Same size and design as upper button -->
 
     <section class="bottom-cta">
 
